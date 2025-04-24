@@ -2,6 +2,7 @@
 #include "helpers/consts.h"
 #include "ui/screens/Board/Board.h"
 #include "ui/screens/MainMenu/MainMenu.h"
+#include <ncurses.h>
 
 int main(int argc, char **argv) {
   DataManager data_manager;
@@ -26,7 +27,7 @@ int main(int argc, char **argv) {
     init_pair(COLOR_PAIR_FOOTER, COLOR_BLACK, COLOR_WHITE);
     init_pair(COLOR_PAIR_MODE, COLOR_BLACK, COLOR_BLUE);
     init_pair(COLOR_PAIR_HEADER, COLOR_BLACK, COLOR_WHITE);
-    init_pair(COLOR_PAIR_BORDER, COLOR_WHITE, -1);
+    init_pair(COLOR_PAIR_BORDER, COLOR_BLUE, -1);
     init_pair(COLOR_PAIR_KEY_HINT, COLOR_WHITE, -1);
 
     if (config.default_board == "") {
